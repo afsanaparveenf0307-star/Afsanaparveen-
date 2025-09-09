@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Afsana Parveen – Resume</title>
+
+<!-- Google Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Afsana Parveen – Resume</title>
+
+<!-- Google Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<style>
+/* ---------- Base / Theme ---------- */
+:root{
+  --ink:#4b3a31;              /* dark coffee for text */
+  --ink-2:#6c5448;            /* mid coffee */
+  --accent:#b78a6a;           /* tan */
+  --accent-2:#d8b9a0;         /* light tan */
+  --paper:#fffdf8;            /* warm paper */
+  --paper-2:#f6efe6;          /* alt paper */
+  --dot:#a18170;
+  --chip:#efe2d6;
+  --success:#7aa874;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  background: radial-gradient(circle at 10% 10%, #efe5db 0 12%, transparent 13%) top left/28px 28px repeat,
+              radial-gradient(circle at 90% 88%, #efe5db 0 12%, transparent 13%) bottom right/28px 28px repeat,
+              #f9f6f2;
+  color:var(--ink);
+  font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  line-height:1.45;
+}
+page{
+  width: 820px;              /* good for screens */
+  max-width: 100%;
+  margin: 32px auto;
+  background: var(--paper);
+  border-radius: 20px;
+  box-shadow: 0 20px 45px rgba(0,0,0,.12);
+  overflow:hidden;
+  position:relative;
+}
+@media print{
+  body{background:white}
+  .page{
+    width: 210mm; min-height: 297mm; margin:0;
+    box-shadow:none; border-radius:0;
+    page-break-inside: avoid;
+  }
+}
+decorative dot bands like the screenshot */
+.page::before,
+.page::after{
+  content:"";
+  position:absolute;
+  left:0; right:0; height:34px;
+  background:
+    radial-gradient(circle, var(--dot) 2px, transparent 3px) 0 0/20px 20px;
+  opacity:.5;
+}
+.page::before{top:0}
+.page::after{bottom:0}
+header{
+  display:grid;
+  grid-template-columns: 205px 1fr;
+  gap:24px;
+  padding:36px 34px 8px;
+  align-items:center;
+}
+
+.photo-wrap{
+  position:relative;
+  width:205px; height:205px;
+}
+.photo{
+  width:100%; height:100%;
+  object-fit:cover;
+  border-radius:50%;
+  display:block;
+  box-shadow: 0 10px 24px rgba(0,0,0,.18);
+  border:10px solid #e8dfd5;
+}
+.photo-bg{
+  position:absolute; inset:0;
+  background:var(--accent-2);
+  border-radius:38% 62% 55% 45%/47% 46% 54% 53%;
+  filter:blur(18px); opacity:.55;
+  z-index:-1;
+}
+title h1{
+  margin:0;
+  font-family:"Merriweather",serif;
+  font-weight:900;
+  letter-spacing:.5px;
+  color:#4a362c;
+  font-size:42px;
+}
+.title .subtitle{
+  margin:6px 0 14px;
+  font-weight:500; color:#7a6156;
+}
+
+/* contact strip like torn tape */
+.contact{
+  display:flex; flex-wrap:wrap; gap:10px 16px;
+}
+.chip{
+  display:flex; align-items:center; gap:8px;
+  background:
+    linear-gradient(180deg,#efe2d6,#e7d6c6 60%,#e0cfbf);
+  padding:8px 12px;
+  border-radius:10px;
+  box-shadow: 0 2px 0 rgba(0,0,0,.06), inset 0 2px 0 rgba(255,255,255,.6);
+  font-size:14px;
+  color:#5b463c;
+  position:relative;
+}
+.chip::after{ /* torn edge */
+  content:"";
+  position:absolute; right:-10px; top:0; bottom:0; width:14px;
+  background: linear-gradient(180deg,#e7d6c6,#e0cfbf);
+  clip-path: polygon(100% 0,60% 8%,100% 18%,58% 30%,100% 42%,60% 56%,100% 68%,60% 78%,100% 90%,60% 100%,0 100%,0 0);
+  filter:drop-shadow(0 1px 0 rgba(0,0,0,.05));
+}
+summary{
+  padding: 14px 34px 22px;
+  display:grid;
+  grid-template-columns: 1fr;
+}
+.summary p{
+  margin:0;
+  background:linear-gradient(180deg,#f7efe6,#f4e7db);
+  border-radius:12px;
+  padding:14px 16px;
+  color:#5b463c;
+  box-shadow: 0 2px 0 rgba(0,0,0,.06) inset;
+}
+--------- Grid Sections ---------- */
+.grid{
+  display:grid;
+  grid-template-columns: 1.05fr 1.05fr;
+  gap:28px;
+  padding: 8px 34px 30px;
+}
+@media(max-width:900px){
+  .header{grid-template-columns:1fr}
+  .photo-wrap{margin:auto}
+  .grid{grid-template-columns:1fr}
+}
+Section cards with “paper” look */
+.card{
+  position:relative;
+  background: var(--paper-2);
+  border-radius:16px;
+  padding:18px 18px 14px;
+  box-shadow: 0 12px 20px rgba(0,0,0,.08);
+  border:1px solid #eadfd2;
+}
+.card .label{
+  position:absolute; top:-14px; left:16px;
+  background:linear-gradient(180deg,#d8b99c,#caa98a);
+  color:white; font-weight:700; letter-spacing:.8px;
+  padding:6px 12px; border-radius:8px;
+  box-shadow:0 6px 14px rgba(0,0,0,.15);
+  text-transform:uppercase; font-size:13px;
+}
+.card .paper-torn{
+  position:absolute; right:12px; top:-18px;
+  width:92px; height:36px;
+  background:linear-gradient(180deg,#d3b398,#c59f82);
+  clip-path: polygon(100% 0,68% 20%,100% 36%,64% 54%,100% 72%,70% 88%,100% 100%,0 100%,0 0);
+  opacity:.85; border-radius:10px;
+}
+
+/* lists */
+ul.clean{margin:8px 0 0 18px; padding:0}
+ul.clean li{margin:6px 0}
+
+/* interest icons row */
+.interests{
+  display:flex; gap:22px; padding:8px 4px 2px;
+  color:#6a5347; font-size:14px; flex-wrap:wrap;
+}
+.interests .i{display:flex; align-items:center; gap:8px}
+language bars */
+.lang{
+  display:grid; gap:12px; margin-top:10px;
+}
+.lang .row{display:grid; grid-template-columns: 110px 1fr; align-items:center; gap:10px}
+.bar{
+  height:10px; border-radius:8px; background:#e7d7c8; overflow:hidden;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.08);
+}
+.bar > span{
+  display:block; height:100%; width:0%;
+  background: linear-gradient(90deg,#a57759,#7a5a46);
+  border-radius:8px;
+  transition:width .9s ease-in-out;
+}
+education timeline style */
+.edu .item{margin:10px 0 14px}
+.edu .school{font-weight:700}
+.edu .time{font-size:12px; color:#7b6559}
+
+/* awards list with checkmarks */
+.awards li{ list-style:none; position:relative; padding-left:22px }
+.awards li::before{
+  content:"\f058"; font-family:"Font Awesome 6 Free"; font-weight:900;
+  position:absolute; left:0; color:var(--success);
+}
+
+/* tiny sticky label used in sections */
+.sticky{
+  display:inline-block; background:#e9d7c4; padding:4px 10px; border-radius:8px;
+  box-shadow: 0 1px 0 rgba(0,0,0,.06), inset 0 1px 0 rgba(255,255,255,.7);
+  font-weight:600; color:#5a463c; font-size:13px;
+}
+
+/* footer spacing */
+.spacer{height:16px}
+print helpers */
+@media print{
+  a[href]::after{content:""}
+  .spacer{display:none}
+}
+</style>
+</head>
+<body>
+<div class="page">
+!-- Header -->
+  <section class="header">
+    <div class="photo-wrap">
+      <div class="photo-bg"></div>
+      <!-- Replace src with your image -->
+      <img class="photo" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop" alt="Profile Photo">
+    </div>
+
+    <div class="title">
+      <h1>AFSANA PARVEEN F</h1>
+      <div class="subtitle">BCA – IInd Year</div>
+
+      <div class="contact">
+        <div class="chip"><i class="fa-solid fa-location-dot"></i> Vellore, Tamil Nadu, India</div>
+        <div class="chip"><i class="fa-solid fa-envelope"></i> afsanaparveen0703@gmail.com</div>
+        <div class="chip"><i class="fa-solid fa-phone"></i> 978-971-2309</div>
+        <div class="chip"><i class="fa-brands fa-instagram"></i> @afsanaparveen0703</div>
+      </div>
+    </div>
+  </section>
+-- Summary -->
+  <section class="summary">
+    <p>
+      Highly motivated and detail-oriented student pursuing a Bachelor's degree in Computer Applications with a strong foundation in Python and Java. Eager to apply knowledge from coursework and internships to an entry-level software development role, aiming to contribute to innovative projects and gain practical experience.
+    </p>
+  </section>
+- Grid -->
+  <section class="grid">
+    <!-- Skills -->
+    <div class="card">
+      <span class="label">Skills</span>
+      <span class="paper-torn" aria-hidden="true"></span>
+      <ul class="clean">
+        <li>Computer Application</li>
+        <li>Python, C, C++, Java</li>
+        <li>Data Structure</li>
+        <li>Computer Graphics</li>
+        <li>HTML</li>
+        <li>Photography &amp; Editing</li>
+      </ul>
+<di<divv class="item">
+        <div class="school">M.M.E.S Women’s Arts &amp; Science College</div>
+        <div>Bachelor of Computer Applications (pursuing)</div>
+      </di>
+
+      <div class="item">
+        <div class="school">Govt. Girls Hr. Sec. School</div>
+        <div>Computer Science Major</div>
+        <div class="time">2021 – 2023</div>
+      </div>
+
+      <div class="spacer"></div>
+      <span class="sticky">Awards</span>
+      <ul class="clean awards" style="margin-top:8px">
+        <li>1<sup>st</sup> Sem – 85%</li>
+        <li>2<sup>nd</sup> Sem – 92%</li>
+        <li>Representative award</li>
+        <li>Calligraphy</li>
+        <li>100% attendance</li>
+      </ul>
+    </div>
+<!-- Languages -->
+    <div class="card" style="grid-column:1/span 1">
+      <span class="label">Language</span>
+      <div class="lang">
+        <div class="row"><strong>English</strong> <div class="bar"><span data-level="90"></span></div></div>
+        <div class="row"><strong>Urdu</strong>    <div class="bar"><span data-level="80"></span></div></div>
+        <div class="row"><strong>Tamil</strong>   <div class="bar"><span data-level="88"></span></div></div>
+        <div class="row"><strong>Hindi</strong>   <div class="bar"><span data-level="70"></span></div></div>
+      </div>
+    </div>
+-- Empty decorative / notes area (kept for spacing like screenshot) -->
+    <div class="card" style="background:#f7efe6;">
+      <span class="label">Notes</span>
+      <p style="margin:6px 0 0; color:#7a6156">
+        Add any extra achievements, workshops, or mini-projects here.
+      </p>
+    </div>
+  </section>
+
+</div>
+<script>
+/* animate language bars */
+window.addEventListener('load',()=>{
+  document.querySelectorAll('.bar > span').forEach(el=>{
+    const lvl = Math.max(0, Math.min(100, parseInt(el.dataset.level||'0',10)));
+    requestAnimationFrame(()=>{ el.style.width = lvl + '%'; });
+  });
+});
+optional: press P to print */
+document.addEventListener('keydown',e=>{
+  if((e.key==='p'||e.key==='P') && (e.ctrlKey || e.metaKey)){ window.print(); }
+});
+</script>
+</body>
+</html>
